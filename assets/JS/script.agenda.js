@@ -139,3 +139,13 @@ function showAgenda(id) {
   
          
   }
+
+  function erroMsg(msg) {
+    console.log("Passou pela função erroMsg()");
+  
+    document.getElementById("erro-msg").innerHTML = msg;
+    document.getElementById("erro-msg").classList.remove("hidden");
+    setTimeout(function () {
+      document.getElementById("erro-msg").classList.add("hidden");
+    }, 4000);
+  }
