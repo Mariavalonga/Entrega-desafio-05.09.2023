@@ -69,18 +69,18 @@ class Agenda {
     constructor() {
       this.Agendas = [];
     }
-    addAgenda(Agenda) {
+    addAgenda(agenda) {
       if (verificarInputVazio()) {
         console.log("Preencha todos os inputs!");
         erroMsg("Preencha todos os inputs!");
       } else {
         console.log("Sucesso! Você está cadastrado");
         sucessoMsg("Sucesso! Você está cadastrado");
-        this.Agendas.push(Agenda);
+        this.Agendas.push(agenda);
       }
     }
     pegarAgendaId(id) {
-      return this.Agendas.find((Agenda) => Agenda.id == id);
+      return this.Agendas.find((agenda) => agenda.id == id);
     }
   }
   
@@ -145,13 +145,13 @@ class Agenda {
   
     let html = "";
   
-    listAgenda.Agendas.forEach((Agenda) => {
-      html += `<div id="AgendaCard" onclick="showAgenda(${Agenda.id})">
-        <img src="${Agenda.foto}" alt="${Agenda.nome}" id="pfpShow">
+    listAgenda.Agendas.forEach((agenda) => {
+      html += `<div id="AgendaCard" onclick="showAgenda(${agenda.id})">
+        <img src="${agenda.foto}" alt="${agenda.nome}" id="pfpShow">
         <div id="info-container">
-        <h2 id="agendaNome">${Agenda.nome}</h2>
-        <p id="AgendaFixTel">Telefone Fixo: ${Agenda.celular}</p>
-        <p id="AgendaTel">Telefone: ${Agenda.telfixo}</p>
+        <h2 id="agendaNome">${agenda.nome}</h2>
+        <p id="AgendaFixTel">Telefone Fixo: ${agenda.celular}</p>
+        <p id="AgendaTel">Telefone: ${agenda.telfixo}</p>
     </div>
     </div>
                     `;
@@ -167,24 +167,24 @@ class Agenda {
   
   function showAgenda(id) {
     document.getElementById("agenda-container").classList.remove("hidden");
-    const Agenda = listAgenda.pegarAgendaId(id);
+    const agenda = listAgenda.pegarAgendaId(id);
     let html = `
     <p>Detalhe</p>
-        <img src="${Agenda.foto}" alt="${Agenda.nome}" id="pfpDetail">
-        <h2 id="agendaNome">${Agenda.nome}</h2>
-        <p id="agendaId">${Agenda.id}</p>
+        <img src="${agenda.foto}" alt="${agenda.nome}" id="pfpDetail">
+        <h2 id="agendaNome">${agenda.nome}</h2>
+        <p id="agendaId">${agenda.id}</p>
        
-        <p id="AgendaTel">Celular: ${Agenda.celular}</p>
-        <p id="AgendaTel">Telefone: ${Agenda.telfixo}</p>
-        <p id="AgendaTel">Data de Nascimento: ${mostrarData(Agenda.niver)}</p>
-        <p id="AgendaTel">Idade: ${Agenda.idade}</p>
-        <p id="AgendaTel">Signo: ${Agenda.signo}</p>
-        <p id="AgendaTel">Email: ${Agenda.email}</p>
-        <p id="AgendaTel">CEP: ${Agenda.cep}</p>
-        <p id="AgendaTel">Cidade: ${Agenda.cidade}</p>
-        <a href="https://whatsapp.com/${Agenda.celular}"><i class="fa-brands fa-whatsapp">Whatsapp</i></a>
-        <a href="https://instagram.com/${Agenda.insta}"><i class="fa-brands fa-instagram">Instagram</i></a>
-       <a href="https://github.com/${Agenda.git}"><i class="fa-brands fa-github">Github</i></a>
+        <p id="AgendaTel">Celular: ${agenda.celular}</p>
+        <p id="AgendaTel">Telefone: ${agenda.telfixo}</p>
+        <p id="AgendaTel">Data de Nascimento: ${mostrarData(agenda.niver)}</p>
+        <p id="AgendaTel">Idade: ${agenda.idade}</p>
+        <p id="AgendaTel">Signo: ${agenda.signo}</p>
+        <p id="AgendaTel">Email: ${agenda.email}</p>
+        <p id="AgendaTel">CEP: ${agenda.cep}</p>
+        <p id="AgendaTel">Cidade: ${agenda.cidade}</p>
+        <a href="https://whatsapp.com/${agenda.celular}"><i class="fa-brands fa-whatsapp">Whatsapp</i></a>
+        <a href="https://instagram.com/${agenda.insta}"><i class="fa-brands fa-instagram">Instagram</i></a>
+       <a href="https://github.com/${agenda.git}"><i class="fa-brands fa-github">Github</i></a>
   
                     `;
     document.getElementById("agenda-container").innerHTML = html;

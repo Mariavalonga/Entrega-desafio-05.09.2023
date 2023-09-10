@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="YqTkG3BqHQ4CK6BMxner" name="Página-1">
+        <mxGraphModel dx="1403" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="40" width="220" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="90" width="220" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Agenda" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="- Nome: String&lt;br&gt;- telfixo: Integer&lt;br&gt;- celular: Integer&lt;br&gt;- foto: String&lt;br&gt;- niver: Integer&lt;br&gt;- idade: Integer&lt;br&gt;- signo: String&lt;br&gt;- id: String&lt;br&gt;- email: String&lt;br&gt;- cep: Integer&lt;br&gt;- cidade: String&lt;br&gt;- insta: String&lt;br&gt;- git: String&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-40" y="180" width="250" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="+ verificarIdade(niver): Integer&lt;br&gt;+ getZodiacSign(): String&lt;br&gt;+ pegarUsuarioId(): String" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="320" width="170" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
