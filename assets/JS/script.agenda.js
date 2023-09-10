@@ -71,3 +71,22 @@ function limparInputs() {
     const insta = (document.getElementById("input-insta").value = "");
     const git = (document.getElementById("input-git").value = "");
   }
+
+  function verificarInputVazio() {
+    console.log("entrou na função verificarInputVazio");
+    const nome = document.getElementById("input-nome").value;
+    const telfixo = document.getElementById("input-tel-fixo").value;
+    const celular = document.getElementById("input-tel-celular").value;
+    const foto = document.getElementById("input-foto").value;
+    const niver = document.getElementById("input-data").value;
+    const email = document.getElementById("input-email").value;
+    const cep = document.getElementById("input-cep").value;
+    const cidade = document.getElementById("input-cidade").value;
+    const insta = document.getElementById("input-insta").value;
+    const git = document.getElementById("input-git").value;
+  
+    if (nome == "" ||telfixo == "" ||celular == "" ||foto == "" ||niver == "" ||
+      email == "" ||cep == "" ||cidade == "" ||insta == "" ||git == "") {
+      return true;
+    }
+  }
