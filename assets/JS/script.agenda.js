@@ -17,3 +17,9 @@ class Agenda {
       this.git = git;
     }
 }
+
+class ListAgenda {
+    constructor() {
+      this.Agendas = [];
+    }
+}
