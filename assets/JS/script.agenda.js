@@ -23,7 +23,7 @@ class ListAgenda {
       this.Agendas = [];
     }
 }
-addAgenda(Agenda) {
+ function addAgenda(Agenda) {
     if (verificarInputVazio()) {
       console.log("Preencha todos os inputs!");
       erroMsg("Preencha todos os inputs!");
@@ -33,4 +33,27 @@ addAgenda(Agenda) {
       this.Agendas.push(Agenda);
     }
   }
-  
+
+  const listAgenda = new ListAgenda();
+
+function criarAgenda() {
+  console.log("você entrou na função criarAgenda");
+  const nome = document.getElementById("input-nome").value;
+  const telfixo = document.getElementById("input-tel-fixo").value;
+  const celular = document.getElementById("input-tel-celular").value;
+  const foto = document.getElementById("input-foto").value;
+  const niver = document.getElementById("input-data").value;
+  const email = document.getElementById("input-email").value;
+  const cep = document.getElementById("input-cep").value;
+  const cidade = document.getElementById("input-cidade").value;
+  const insta = document.getElementById("input-insta").value;
+  const git = document.getElementById("input-git").value;
+
+  const pessoa = new Agenda( nome, telfixo, celular, foto, niver, email, cep, cidade, insta, git);
+  listAgenda.addAgenda(pessoa);
+
+  console.log(pessoa);
+  limparInputs();
+  verificarInputVazio();
+  renderizarAgenda();
+}
