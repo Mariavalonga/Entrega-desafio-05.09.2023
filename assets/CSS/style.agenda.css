@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.hidden{
+    display: none;
+}
+body{
+    background-color: rgb(217, 219, 232);
+}
+#sucesso-msg{
+    color: green;
+}
+#erro-msg{
+    color: red;
+}
+#title{
+    font-size: 6vh;
+    color: rgb(243, 6, 144);
+}
+#container{
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    
+}
+#show-container{
+    margin: 50px;
+    max-width: 50%;
+}
+
+#agenda-container{
+    background-color: rgb(217, 219, 232);
+    align-items: center;
+    margin: 0;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgb(243, 6, 144);
+}
+
+#agendaDetail{
+    max-width: 200px;
+    max-height: 200px;
+    border: 100px;
+    cursor: pointer;
+}
+
+#info-container{
+    display: flex;
+    flex-direction: column;
+}
+#btn{
+    background-color: rgb(243, 6, 144);
+    color: white;
+    border: none;
+    padding: 5px;
+}
+input{
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 2px 4px rgb(243, 6, 144);
+}
+a{
+    cursor: pointer;
+    color: black;
+    font-style: none;
+}
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+}
+#AgendaCard {
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgb(243, 6, 144);
+}

@@ -79,7 +79,7 @@ class Agenda {
         this.Agendas.push(Agenda);
       }
     }
-    pegarContatoId(id) {
+    pegarAgendaId(id) {
       return this.Agendas.find((Agenda) => Agenda.id == id);
     }
   }
@@ -167,7 +167,7 @@ class Agenda {
   
   function showAgenda(id) {
     document.getElementById("agenda-container").classList.remove("hidden");
-    const Agenda = listAgenda.pegarContatoId(id);
+    const Agenda = listAgenda.pegarAgendaId(id);
     let html = `
     <p>Detalhe</p>
         <img src="${Agenda.foto}" alt="${Agenda.nome}" id="pfpDetail">
