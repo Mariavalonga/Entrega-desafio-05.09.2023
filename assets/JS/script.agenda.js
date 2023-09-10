@@ -110,3 +110,32 @@ function limparInputs() {
     });
     document.getElementById("show-container").innerHTML = html;
   }
+
+  
+function showAgenda(id) {
+    document.getElementById("agenda-container").classList.remove("hidden");
+    const Agenda = listAgenda.pegarContatoId(id);
+    let html = `
+    <p>Detalhe</p>
+        <img src="${Agenda.foto}" alt="${Agenda.nome}" id="pfpDetail">
+        <h2 id="agendaNome">${Agenda.nome}</h2>
+        <p id="agendaId">${Agenda.id}</p>
+       
+        <p id="AgendaTel">Celular: ${Agenda.celular}</p>
+        <p id="AgendaTel">Telefone: ${Agenda.telfixo}</p>
+        <p id="AgendaTel">Data de Nascimento: ${mostrarData(Agenda.niver)}</p>
+        <p id="AgendaTel">Idade: ${Agenda.idade}</p>
+        <p id="AgendaTel">Signo: ${Agenda.signo}</p>
+        <p id="AgendaTel">Email: ${Agenda.email}</p>
+        <p id="AgendaTel">CEP: ${Agenda.cep}</p>
+        <p id="AgendaTel">Cidade: ${Agenda.cidade}</p>
+        <a href="https://whatsapp.com/${Agenda.celular}"><i class="fa-brands fa-whatsapp">Whatsapp</i></a>
+        <a href="https://instagram.com/${Agenda.insta}"><i class="fa-brands fa-instagram">Instagram</i></a>
+       <a href="https://github.com/${Agenda.git}"><i class="fa-brands fa-github">Github</i></a>
+  
+                    `;
+    document.getElementById("agenda-container").innerHTML = html;
+    console.log(id);
+  
+         
+  }
