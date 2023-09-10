@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.agenda.css">
+    <script src="./assets/JS/script.agenda.js"></script>
+    <title>Agenda Telefônica</title>
+</head>
+<body>
+    <div id="container">
+        <div id="input-container">
+            <h2 id="title">Agenda Telefônica</h2>
+            <div id="input-container">
+                <input placeholder="Nome Completo" id="input-nome" required>
+                <input type="text" placeholder="Telefone fixo"  id="input-tel-fixo" required>
+                <input type="text" placeholder="Telefone celular"   id="input-tel-celular" required>
+                <input placeholder="URL da foto" id="input-foto" required>
+                <input type="date" id="input-data" required>
+                <input placeholder="E-mail" id="input-email" required>
+                <input type="text" placeholder="CEP" id="input-cep" required>
+                <input placeholder="Cidade" id="input-cidade" required>
+                <input placeholder="@Instagram" id="input-insta" required>
+                <input placeholder="@Github" id="input-git" required>
+                <button onclick="criarAgenda()" id="btn">Adicionar Contato</button>
+            </div>
+            <p id="sucesso-msg" class="hidden"></p>
+            <p id="erro-msg" class="hidden"></p>
+            <div id="show-container">
+                </div>
+        </div>
+            <div id="agenda-container" class="hidden">
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
