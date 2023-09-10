@@ -17,6 +17,10 @@ class Agenda {
       this.git = git;
     }
 }
+function pegarUsuarioId() {
+    const id = Math.floor(Math.random() * 9999);
+    return id;
+  }
 
 class ListAgenda {
     constructor() {
