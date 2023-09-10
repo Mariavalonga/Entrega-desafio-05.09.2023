@@ -160,6 +160,11 @@ function limparInputs() {
     });
     document.getElementById("show-container").innerHTML = html;
   }
+  function mostrarData(niver){
+    const data = niver.split('-');
+    const newNiver = data.reverse().join('/');
+    return newNiver
+  }
 
   
 function showAgenda(id) {
