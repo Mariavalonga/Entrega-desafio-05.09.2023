@@ -149,3 +149,13 @@ function showAgenda(id) {
       document.getElementById("erro-msg").classList.add("hidden");
     }, 4000);
   }
+
+  function sucessoMsg(msg) {
+    console.log("Passou pela função sucessoMsg()");
+  
+    document.getElementById("sucesso-msg").innerHTML = msg;
+    document.getElementById("sucesso-msg").classList.remove("hidden");
+    setTimeout(function () {
+      document.getElementById("sucesso-msg").classList.add("hidden");
+    }, 4000);
+  }
