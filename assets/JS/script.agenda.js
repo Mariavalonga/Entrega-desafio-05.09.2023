@@ -90,3 +90,23 @@ function limparInputs() {
       return true;
     }
   }
+
+  function renderizarAgenda() {
+    console.log("entrou pela funcao renderizarAgenda");
+    document.getElementById("show-container").innerHTML = "";
+  
+    let html = "";
+  
+    listAgenda.Agendas.forEach((Agenda) => {
+      html += `<div id="AgendaCard" onclick="showAgenda(${Agenda.id})">
+        <img src="${Agenda.foto}" alt="${Agenda.nome}" id="pfpShow">
+        <div id="info-container">
+        <h2 id="agendaNome">${Agenda.nome}</h2>
+        <p id="AgendaFixTel">Telefone Fixo: ${Agenda.celular}</p>
+        <p id="AgendaTel">Telefone: ${Agenda.telfixo}</p>
+    </div>
+    </div>
+                    `;
+    });
+    document.getElementById("show-container").innerHTML = html;
+  }
