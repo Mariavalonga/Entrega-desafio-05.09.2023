@@ -23,6 +23,10 @@ class ListAgenda {
       this.Agendas = [];
     }
 }
+ function pegarContatoId(id) {
+    return this.Agendas.find((Agenda) => Agenda.id == id);
+  }
+
  function addAgenda(Agenda) {
     if (verificarInputVazio()) {
       console.log("Preencha todos os inputs!");
