@@ -17,6 +17,16 @@ class Agenda {
       this.git = git;
     }
 }
+function verificarIdade(niver) {
+    const data = new Date(niver);
+    const dataAno = data.getFullYear();
+
+    const dataHoje = new Date();
+    const dataAtual = dataHoje.getFullYear();
+
+    const idade = dataAtual - dataAno;
+    return idade;
+  }
 function pegarUsuarioId() {
     const id = Math.floor(Math.random() * 9999);
     return id;
@@ -27,7 +37,7 @@ class ListAgenda {
       this.Agendas = [];
     }
 }
- function pegarContatoId(id) {
+ function pegarAgendaId(id) {
     return this.Agendas.find((Agenda) => Agenda.id == id);
   }
 
@@ -122,7 +132,7 @@ function limparInputs() {
   
 function showAgenda(id) {
     document.getElementById("agenda-container").classList.remove("hidden");
-    const Agenda = listAgenda.pegarContatoId(id);
+    const Agenda = listAgenda.pegarAgendaId(id);
     let html = `
     <p>Detalhe</p>
         <img src="${Agenda.foto}" alt="${Agenda.nome}" id="pfpDetail">
