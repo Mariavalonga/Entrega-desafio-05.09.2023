@@ -23,3 +23,14 @@ class ListAgenda {
       this.Agendas = [];
     }
 }
+addAgenda(Agenda) {
+    if (verificarInputVazio()) {
+      console.log("Preencha todos os inputs!");
+      erroMsg("Preencha todos os inputs!");
+    } else {
+      console.log("Sucesso! Você está cadastrado");
+      sucessoMsg("Sucesso! Você está cadastrado");
+      this.Agendas.push(Agenda);
+    }
+  }
+  
